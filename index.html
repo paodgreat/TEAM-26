@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        width: 300px;
+        text-align: center;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: #6c63ff;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h1 {
+        color: #333;
+        margin-top: 60px;
+      }
+      #ip-info {
+        margin-top: 20px;
+      }
+      p {
+        margin: 10px 0;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="circle" aria-hidden="true"></div>
+      <h1>IP Information</h1>
+      <div id="ip-info" aria-live="polite">Loading...</div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
